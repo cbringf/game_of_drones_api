@@ -1,12 +1,14 @@
-
+const ajv = require('ajv');
+const { validateSchema } = require('feathers-hooks-common');
+const schema = require('../../models/schemas/player/player.model');
 
 module.exports = {
   before: {
     all: [],
     find: [],
     get: [],
-    create: [],
-    update: [],
+    create: [validateSchema(schema, ajv)],
+    update: [validateSchema(schema, ajv)],
     patch: [],
     remove: []
   },
