@@ -10,4 +10,4 @@ module.exports = {
 		parentField: 'player2Id',
 		childField: '_id'
 	}]
-}
+};

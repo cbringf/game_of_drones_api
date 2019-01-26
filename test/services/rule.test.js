@@ -7,4 +7,20 @@ describe('\'rule\' service', () => {
 
 		assert.ok(service, 'Registered the service');
 	});
+<<<<<<< HEAD
+=======
+
+	it('creates a rule and validates data', async () => {
+		const ruleData = {
+			move: 'a',
+			kills: 'b'
+		};
+		const ruleService = app.service('rule');
+		const rule = await ruleService.create(ruleData);
+
+		assert.ok(rule, 'Rule created!');
+		assert.equal(rule.move, ruleData.move);
+		assert.equal(rule.kills, ruleData.kills);
+	});
+>>>>>>> development
 });
