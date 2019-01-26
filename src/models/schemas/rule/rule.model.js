@@ -8,4 +8,4 @@ module.exports = {
 		}
 	},
 	required: ['move', 'kills']
-}
+};
