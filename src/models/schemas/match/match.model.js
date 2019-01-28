@@ -6,6 +6,12 @@ module.exports = {
 		player2Id: {
 			type: 'string'
 		},
+		open: {
+			type: 'boolean'
+		},
+		finished: {
+			type: 'boolean'
+		},
 		moves: {
 			type: 'object',
 			properties: {

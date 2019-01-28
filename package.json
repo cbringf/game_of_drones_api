@@ -37,7 +37,9 @@
 		"cors": "^2.8.5",
 		"feathers-hooks-common": "^4.20.2",
 		"feathers-nedb": "^4.0.1",
+		"feathers-seeder": "^2.0.0",
 		"helmet": "^3.15.0",
+		"lodash": "^4.17.11",
 		"nedb": "^1.8.0",
 		"serve-favicon": "^2.5.0",
 		"winston": "^3.1.0"
