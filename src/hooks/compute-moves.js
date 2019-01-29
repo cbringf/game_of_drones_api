@@ -53,7 +53,7 @@ function computeMoves(player1, player2, moves, rules) {
 			player1.hits++;
 			result.updatedPlayers.push(player1);
 		}
-		else {
+		else if(rules.filter(r => r.move === p2Move && r.kills === p1Move).length > 0) {
 			player2.hits++;
 			result.updatedPlayers.push(player2);
 		}
