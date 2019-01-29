@@ -1,19 +1,20 @@
-// Application hooks that run for every service
-const log = require('./hooks/log');
+const ajv = require('ajv');
+const { validateSchema } = require('feathers-hooks-common');
+const schema = require('../../models/schemas/rule/rule.model');
 
 module.exports = {
 	before: {
-		all: [log()],
+		all: [],
 		find: [],
 		get: [],
-		create: [],
-		update: [],
+		create: [validateSchema(schema, ajv)],
+		update: [validateSchema(schema, ajv)],
 		patch: [],
 		remove: []
 	},
 
 	after: {
-		all: [log()],
+		all: [],
 		find: [],
 		get: [],
 		create: [],
@@ -23,7 +24,7 @@ module.exports = {
 	},
 
 	error: {
-		all: [log()],
+		all: [],
 		find: [],
 		get: [],
 		create: [],
